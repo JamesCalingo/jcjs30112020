@@ -1,0 +1,11 @@
+body * {
+  color: white !important;
+  background: blue !important;
+  outline: 0.25 rem solid gray !important;
+}
+
+.debug-center {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
