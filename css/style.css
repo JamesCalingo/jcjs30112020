@@ -31,3 +31,8 @@ img.img-1, img.img-2, img.img-3, img.img-4 {
 h2, P:not(:last-child) {
   margin-bottom: 2.4rem;
 }
+
+footer{
+  display: flex;
+  justify-content: space-evenly;
+}
