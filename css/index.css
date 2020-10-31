@@ -1,0 +1,48 @@
+body{
+  display: grid;
+  grid-template-columns: 1fr 0.5in [start] 1.25in 5in 1.25in [end] 0.5in 1fr;
+  padding: 0.5in 0;
+}
+
+body * {
+  grid-column: start/ end;
+}
+
+@media (max-width: 8.5in) {
+  body{grid-template-columns: 1fr 5% [start] 15% 60% 15% [end] 5% 1fr;}
+}
+
+h1 {
+  font: 700 2.0rem/1.2 "Roboto";
+  color: hsl(000, 000%, 33%);
+}
+
+h2 {
+  font: 400 1.5rem/1.2 "Roboto";
+}
+
+li {
+  font: 700 1.4rem/1.2 "Roboto";
+  color: hsl(250, 100%, 67%);
+}
+
+ul {
+  padding: 10px
+}
+
+
+a {
+  color: blue
+}
+
+@media (max-width: 8.5in) {
+  :root {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 5.0in) {
+  :root {
+    font-size: 16px;
+  }
+}

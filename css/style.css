@@ -24,12 +24,15 @@ article * {
 .img-4 {
   grid-column: 1 / 8;
 }
-img.img-1, img.img-2, img.img-3, img.img-4 {
+.img-1 img, .img-2 img, .img-3 img, .img-4 img {
   width: 100%
 }
 
-h2, P:not(:last-child) {
-  margin-bottom: 2.4rem;
+figcaption {
+  margin-top: 0.5rem;
+  
+  display: flex;
+justify-content: center;    
 }
 
 footer{
