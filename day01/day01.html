@@ -1,30 +1,88 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>JCJS30</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i">
-    <link rel="stylesheet" href="../css/reset.css">
-    <!-- <link rel="stylesheet" href="css/debug.css"> -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/text.css">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="assets/css/day1.css">
+</head>
+
+<body>
+
+<h1>Make your own beats with your keyboard!</h1>
+<p>Just use the keys shown below to make some sick beats! You can also play along with your favorite songs too!</p>
+
+  <div class="keys">
+    <div data-key="65" class="key">
+      <kbd>A</kbd>
+      <span class="sound">Clap</span>
+    </div>
+    <div data-key="83" class="key">
+      <kbd>S</kbd>
+      <span class="sound">Hi Hat</span>
+    </div>
+    <div data-key="68" class="key">
+      <kbd>D</kbd>
+      <span class="sound">Kick</span>
+    </div>
+    <div data-key="70" class="key">
+      <kbd>F</kbd>
+      <span class="sound">Open Hat</span>
+    </div>
+    <div data-key="71" class="key">
+      <kbd>G</kbd>
+      <span class="sound">Boom</span>
+    </div>
+    <div data-key="72" class="key">
+      <kbd>H</kbd>
+      <span class="sound">Ride Cymbal</span>
+    </div>
+    <div data-key="74" class="key">
+      <kbd>J</kbd>
+      <span class="sound">Snare</span>
+    </div>
+    <div data-key="75" class="key">
+      <kbd>K</kbd>
+      <span class="sound">Tom</sjpan>
+    </div>
+    <div data-key="76" class="key">
+      <kbd>L</kbd>
+      <span class="sound">Wood Block</span>
+    </div>
+  </div>
+
+  <audio data-key="65" src="assets//sounds/clap.wav"></audio>
+  <audio data-key="83" src="assets/sounds/hihat.wav"></audio>
+  <audio data-key="68" src="assets/sounds/kick.wav"></audio>
+  <audio data-key="70" src="assets/sounds/openhat.wav"></audio>
+  <audio data-key="71" src="assets/sounds/boom.wav"></audio>
+  <audio data-key="72" src="assets/sounds/ride.wav"></audio>
+  <audio data-key="74" src="assets/sounds/snare.wav"></audio>
+  <audio data-key="75" src="assets/sounds/tom.wav"></audio>
+  <audio data-key="76" src="assets/sounds/tink.wav"></audio>
+
+  <script>
     
-  </head>
-  <body>
 
+function playSound(event){
+      const audio = document.querySelector(`audio[data-key="${event.keyCode}"`)
+      const key = document.querySelector(`.key[data-key="${event.keyCode}"]`)
+      if(!audio) return
+      audio.currentTime = 0
+      audio.play()
+      key.classList.add("playing")
+    }
 
-    <article>
-      <h1>DAY 1: PROJECT TITLE</h1>
-      <h2><a href="/">View the finished product here</a></h2>
- <p>DON'T LOOK AT THIS YET. IT'S NOT READY.</p>
+    function removeTransition(event) {
+      if(event.propertyName !== 'transform') return
+      this.classList.remove('playing')
+    }
 
- <p>This is me just testing a few things. Come back tomorrow when it'll actually be what I did on day 1.</p>
-</article>
-<footer>
-<a href="../day00/day0.html">Yesterday</a>
-<a href="../index.html">Return Home</a>
-<a href="">Tomorrow</a>
-</footer>
-  </body>
+    const keys = document.querySelectorAll('.key')
+    keys.forEach(key => key.addEventListener('transitionend', removeTransition
+    ))
+    window.addEventListener("keydown", playSound)
+  </script>
+
+</body>
+
 </html>
