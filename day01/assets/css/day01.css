@@ -1,6 +1,6 @@
 html {
   font-size: 10px;
-background: slategray
+background: slategray;
 }
 
 body,html {
@@ -9,10 +9,23 @@ body,html {
   font-family: sans-serif;
 }
 
+h1, h2, p, footer {
+  text-align: center;
+  font-size: 18pt
+}
+
+h1{
+  font-size: 36pt;
+  
+}
+
+h2{
+  font-size: 20pt
+}
+
 .keys {
   display: flex;
   flex: 1;
-  min-height: 100vh;
   align-items: center;
   justify-content: center;
 }
