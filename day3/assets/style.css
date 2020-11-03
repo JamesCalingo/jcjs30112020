@@ -32,6 +32,6 @@ body {
 }
 
 a{
-  color: var(--base);
+  color: blue;
   text-decoration: none;
 }

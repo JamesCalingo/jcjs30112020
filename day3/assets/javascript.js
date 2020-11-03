@@ -1,3 +1,5 @@
+// @ts-check
+
 const inputs = document.querySelectorAll('.controls input');
 function handleUpdate () {
 const suffix = this.dataset.sizing || ''
