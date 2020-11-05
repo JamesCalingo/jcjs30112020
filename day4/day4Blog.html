@@ -28,15 +28,19 @@
 
       <p>As I was unsure of how I was going to do this, I actually included a script tag for the JavaScript file where I did everything on THIS page. If you go to the Console under developer tools, you'll see everything that I did. Of course, the source JS code is also visible if you check under Sources. If you do look at that, you'll notice that I console.logged empty strings in a bunch of places - this is just to separate the different tasks I did visually in the console to make it easier to go through.</p>
 
+      <p>This was a good refresher on Array methods, though. They're something I'm aware of but not entirely familiar with, and I feel that they're going to be important for interviews (since a lot of interviews involve arrays - granted, those are mostly for loops, but still...).</p>
+
       <p>There is one thing with this, however: I'm not sure if this is just Chrome, but I did console.table for anything returning an array. However, if you load the page THEN go into dev tools, you won't see the table unless you refresh the page with the console already open. I do recommend looking at the table though - it's much prettier than just the regular console.log, even if it does require more scrolling.</p>
 
       <p>P.S.: If you're familiar with this exercise in the JavaScript 30, you'll also notice that I left out the Wikipedia example, since it would just break everything (I didn't feel like just commenting it out).</p>
+
+      <p>(Also, I found a REALLY weird quirk revisiting this: the array.sort() method is used twice, but for some reason, when viewing the array, both instances use the second sort (by lifespan). However, if you refresh for the tables, then the first table (inventors sorted by the year they were born) is actually correct.)</p>
 
 </article>
 <footer>
 <a href="../day3/day3Blog.html">Yesterday</a>
 <a href="../index.html">Return Home</a>
-<a href="">Tomorrow</a>
+<a href="../day5/day5Blog.html">Tomorrow</a>
 </footer>
 <script src="day4.js"></script>
   </body>

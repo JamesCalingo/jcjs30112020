@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Day 9</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i">
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- <link rel="stylesheet" href="css/debug.css"> -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/text.css">
+    <style>
+      ul{
+        margin-bottom: 25px;
+      }
+    </style>
+    
+  </head>
+  <body>
+
+
+    <article>
+      <h1>DAY 9: PROJECT TITLE</h1>
+      <h2><a href="/">View the finished product here</a></h2>
+
+
+      <p>To wrap up today, I'd like to discuss something interesting I learned in the process of setting up this project. I mentioned this in passing on day 4, said I'd explain it later, and that "later" is now:</p>
+
+      <p>Originally, I had days 0-9 styled as double digits (“day00”, “day01, “day02”, etc.) If you’re at all familiar with how computers (apparently used to) function, you might know why I did this, but for those who aren’t:</p>
+
+<p>When I did this, I was under the understanding that computers “alphabetize” numbers based on their first digit - no matter how long the number is. Say you had a bunch of files numbered 1-19. If you sorted these files by name, you might be surprised when it shows up as </p>
+
+<ul>
+  <li>1</li>
+<li>10</li>
+<li>11</li>
+<li>12</li>
+<li>and so on</li>
+</ul>
+<p>instead of</p>
+
+<ul>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>and so on</li>
+</ul>
+
+<p>By putting a 0 in front of the digit for single digit numbers, we can essentially “trick” the computer into thinking they’re first in order, which they’re supposed to be.</p>
+
+<p>However, a little poking around showed that this wasn’t the case - the computer can count properly without taking the tens digit into account. This may be due to the fact that I have the files as “dayxx” as opposed to starting with the numbers, but I’m honestly not sure.</p>
+
+<p>Also, the reason I started at 0 is because that’s where a lot of programming languages start counting for those who weren’t aware (you get used to the after a while). It also made sense to me because I wanted it to represent the sort of "pre-project" phase - not doing any actual JS30 work, just getting the environment for it ready. </p>
+
+<p>P.S.: There is a reason I kept 2 as 02 though. It’s a reference to one of my favorite television shows from my childhood - if you get it, then you’re awesome, but if you don’t, then I’m not explaining it to you. Sorry.</p>
+
+</article>
+<footer>
+<a href="">Yesterday</a>
+<a href="../index.html">Return Home</a>
+<a href="">Tomorrow</a>
+</footer>
+  </body>
+</html>
