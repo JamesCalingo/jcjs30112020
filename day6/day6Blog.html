@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Day 6</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i">
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- <link rel="stylesheet" href="css/debug.css"> -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/text.css">
+    
+  </head>
+  <body>
+
+
+    <article>
+      <h1>DAY 6: Type Ahead</h1>
+      <h2><a href="day6.html">View the finished product here</a></h2>
+
+<p>Y'know how search engines will try and guess what you're about to look for? This is essentially that: you enter data into the search box, and then a list of cities with text that matches what you're typing in will pop up below.</p>
+
+<p>For this exercise, the data comes from <a href="https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json" target="blank">This listing of the top 1,000 cities by population in the United States</a>. I'm not sure when it was collected, but there's a line in the data that implies that it's from 2013, which means it is likely out of date (though there's another interesting quirk I'll discuss later).</p>
+
+<p>This one, like the one before it, was super cool. It also taught me something new: the fetch() method!</p>
+
+<p>For reasons I'd rather not get into, I haven't really done much with APIs. However, when making API calls, I'm most familiar with using AJAX (That's Asynchronous JavaScript and XML) by doing $.AJAX. As this is meant to be jQuery free, I had no idea how we would get the data going in, but learning this method of fetching data (heh) is interesting, and may have strong implications for future projects.</p>
+
+<p>A few other notes:</p>
+
+<p>- I ended up having an embarassingly dumb error happen where text was being taken out of the HTML. I thought I had done everything correctly (no errors were popping up), was absolutely baffled by it, and then realized that it was because I forgot a quotation mark somewhere that the error checkers were missing due to it being in a template literal.</p>
+
+<p>- You'll notice that the link to this article from the app is above the list as opposed to at the bottom. That's because if you search for something then clear the search box, the entire list pops up, and scrolling throuh 1,000 results to get back to this page isn't fun.</p>
+
+<p>- This is probably one of the few instances where I just copied the example CSS. I thought it was too cool to ignore and since it wasn't featured in the video, I figured I'd just do it this way for today.</p>
+
+<p>- There's a function that adds commas to the population numbers where they normally get added (i.e. for every three digits starting from the right). I considered adding it to the ranks, but given that only one of them would use it, figured it wasn't necessary.</p>
+
+<p>- I mentioned earlier that there's an interesting quirk with the data, and it's this: New Jersey (where I live as of writing this) has this thing where each municipality in the state has a specific "type" (City, Township, etc.). This list, when considering "cities" in NJ, only lists the municipalities that are classified as "cities" in NJ's official records. I realized this when I found out that Edison, NJ (the fifth largest municipality in NJ and a place I used to go to a lot because I have friends who live there) was not on this list.</p>
+
+<p>- Where I currently live is not on this list, but where I used to live is! I'm not saying which city it is, but I will say that it's in Massachusetts (and it's not Boston - though I did live there for the first three years of my life).</p>
+
+<p>- Finally, if you peek at the link for the data, you'll see the name "Miserlou". I was tempted to make a surf rock reference somewhere in the app, but I couldn't think of a good one (though I just made one here...).</p>
+
+</article>
+<footer>
+<a href="../day5/day5Blog.html">Yesterday</a>
+<a href="../index.html">Return Home</a>
+<a href="">Tomorrow</a>
+</footer>
+  </body>
+</html>
