@@ -1,65 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Day 9</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i">
-    <link rel="stylesheet" href="../css/reset.css">
-    <!-- <link rel="stylesheet" href="css/debug.css"> -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/text.css">
-    <style>
-      body{
-        background-color: burlywood
-      }
-    </style>
-    
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 9</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <!-- <link rel="stylesheet" href="css/debug.css"> -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/text.css">
+  <style>
+    body {
+      background-color: burlywood
+    }
+
+    code {
+      font-family: 'Roboto Mono', monospace;
+      background: lightgray;
+      margin-bottom: 25px;
+    }
+
+    ul {
+      margin-bottom: 25px;
+    }
+  </style>
+
+</head>
+
+<body>
 
 
-    <article>
-      <h1>DAY 9: Clickbait!</h1>
-      <h2><a href="day9Blog.html">Read the other blog here</a></h2>
+  <article>
+    <h1>These console tricks are sure to blow your mind!</h1>
 
+    <p>So...you're probably wondering why today's "app" looks just like one of my blog posts.</p>
 
-      <p>So...you're probably wondering why today's "app" looks just like one of my blog posts.</p>
+    <p>That's because, like days 4 and 7, there's no app today: it's just pure JS stuff. Unlike those days, however,
+      we're not doing anything with array methods; instead, we're going to discuss a bunch of random things you can do
+      with the console!</p>
 
-      <p>That's because, like days 4 and 7, there's no app today: it's just pure JS stuff. Unlike those days, however, we're not doing anything with array methods; instead, we're going to discuss </p>
+    <p>For you non-JS savvy folk, the console allows a JavaScript developer to see important things: uncaught errors,
+      variables and their types, and so much more. This is commonly done by using <code>console.log()</code>.</p>
 
-<p>When I did this, I was under the understanding that computers “alphabetize” numbers based on their first digit - no matter how long the number is. Say you had a bunch of files numbered 1-19. If you sorted these files by name, you might be surprised when it shows up as </p>
+    <p>However, there are a lot of things you can do with the console besides just passing in variable names and
+      primitives (numbers, strings, and booleans).</p>
 
-<ul>
-  <li>1</li>
-<li>10</li>
-<li>11</li>
-<li>12</li>
-<li>and so on</li>
-</ul>
-<p>instead of</p>
+    <p>The first one is somewhat random and obscure: if you put <code>%s</code> into a string you're console.logging, you can
+      then define a value to put into the string for the <code>%s</code>, like this:</p>
 
-<ul>
-  <li>1</li>
-  <li>2</li>
-  <li>3</li>
-  <li>4</li>
-  <li>and so on</li>
-</ul>
+    <code>console.log("This is %s", "Madness!")</code>
 
-<p>By putting a 0 in front of the digit for single digit numbers, we can essentially “trick” the computer into thinking they’re first in order, which they’re supposed to be.</p>
+    <p>You're unlikely to have much need for this, however, since template literal has basically replaced concatenation
+      as the primary method of doing stuff like this.</p>
 
-<p>However, a little poking around showed that this wasn’t the case - the computer can count properly without taking the tens digit into account. This may be due to the fact that I have the files as “dayxx” as opposed to starting with the numbers, but I’m honestly not sure.</p>
+    <p>The next method, however, is more amusing: if you put <code>%c</code> at the start of whatever string you're
+      console.logging, you can actually style it like using CSS!</p>
 
-<p>Also, the reason I started at 0 is because that’s where a lot of programming languages start counting for those who weren’t aware (you get used to the after a while). It also made sense to me because I wanted it to represent the sort of "pre-project" phase - not doing any actual JS30 work, just getting the environment for it ready. </p>
+    <code>console.log("%c THIS. IS. SPARTA!", "font-size: 60px")</code>
 
-<p>P.S.: There is a reason I kept 2 as 02 though. It’s a reference to one of my favorite television shows from my childhood - if you get it, then you’re awesome, but if you don’t, then I’m not explaining it to you. Sorry.</p>
+    <p>Now, we're going to get into other <code>console._____</code> methods:</p>
 
-</article>
-<footer>
-<a href="">Yesterday</a>
-<a href="../index.html">Return Home</a>
-<a href="">Tomorrow</a>
-</footer>
-  </body>
+    <ul>
+      <li><code>Console.warn()</code>, which will print a warning such as <code>"This is a bad idea..."</code></li>
+      <li><code>Console.error()</code>, which will print an error like <code>"You can't do that genius!"</code> You've
+        probably seen a ton of error messages, but may not have been aware that you could actually make your own.</li>
+      <li><code>Console.info()</code>, which will print an informative statement like <code>"Info statements have a blue
+          background."</code></li>
+      <li><code>Console.assert()</code>, which will run a test on whatever you pass in and then produce a statement if
+        it's false,
+        such as <code>2 + 2 === 4, "Nope. Gotta love JavaScript!"</code>
+        <br>or
+        <br>
+        <code>"2" + 2 === 4, "Nope. Gotta
+          love JavaScript!"</code>
+        <br>
+        This one's actually kinda useful to check if your HTML elements have specific classes or ids attached to them.
+      </li>
+    </ul>
+
+    <p>I should mention that when you check each of these methods in the console except for info, they will tell you who
+      called them and where the call was made.</p>
+
+    <p>There are a few others as well:</p>
+    <ul>
+      <li><code>Console.dir()</code> allows you to view an object of properties for a DOM element</li>
+      <li><code>Console.group()</code> lets you group multiple <code>console.log()</code> statements together (I
+        could've used this a few days ago...)</li>
+      <li><code>Console.count()</code> shows you how many times you <code>console.log()</code> the same thing</li>
+      <li><code>Console.time()</code> tells you how long a certain action takes</li>
+      <li><code>Console.table()</code> takes an array and formats it as a table (I used this back on day 4)</li>
+    </ul>
+
+    <p>There is one more method, but I don't recommend using it unless you have a VERY GOOD reason:
+      <code>console.clear()</code>. You can probably guess what it does and why I don't recommend it.</p>
+
+    <p>So that's some things you can do with the console. Whether or not any of this is actually useful depends on your
+      needs, but I hope you learned something from this - I certainly did. If you want to know more about any of these,
+      you can always check <a href="https://www.w3schools.com/Jsref/obj_console.asp">w3schools</a> or <a
+        href="https://developer.mozilla.org/en-US/docs/Web/API/Console">Mozilla's docs</a> to learn more.</p>
+
+  </article>
+  <footer>
+    <h2><a href="day9Blog.html">Read more about this, in case you haven't read enough today</a></h2>
+  </footer>
+<script>
+  console.clear()
+</script>
+</body>
+
 </html>
