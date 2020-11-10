@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Day 10</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i">
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- <link rel="stylesheet" href="css/debug.css"> -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/text.css">
+    
+  </head>
+  <body>
+
+
+    <article>
+      <h1>DAY 10: Shift Click</h1>
+      <h2><a href="day10.html">View the finished product here</a></h2>
+
+      <p>This one's pretty simple: click on a checkbox, hold down the shift key while checking a second checkbox (preferrably not one adjacent to the first checkbox), and watch as all the checkboxes in between get checked.</p>
+
+      <p>Surprisingly, the hardest part of this project was an ES6 issue: I tried to have the main function to handle the checkboxes as an arrow function, but it didn't work. Only when I went back to a regular ol' function declaration did it work. I'm not sure why that is, but again, I suspect it may be tied to the event listener.</p>
+
+      <p>A few other notes:</p>
+
+      <ul>
+        <li>The app starts getting a bit funky if you play with it a bit. It's mainly due to the event being tied to the shift key behing held down, so I recommend only holding it when you're about to check a box.</li>
+        <li>When the page loads, the first checkbox to determine what's between the two checkboxes to mark off is the bottom of the list. In case that explanation didn't make sense (which it probably didn't), think of it this way: if you shift click the first checkbox when loading the page, it will check all of the boxes.</li>
+        <li>I'm not sure if other browsers do it, but when using Chrome, holding down the shift key actually shows you the last checkbox you clicked.</li>
+        <li>I tried figuring out a way to uncheck multiple boxes at once, but it's surprisingly tricky...</li>
+        <li>The magic, unfortunately, does not work on mobile (that's something I've said quite a bit during this project).</li>
+        <li>Apparently I REALLY need to look into what JS/TS think is available to type:Element, 'cause when using @ts-check, it's claiming that the "checked" property doesn't exist on it...</li>
+      </ul>
+
+      <p></p>
+</article>
+<footer>
+<a href="../day9/day9Blog.html">Yesterday</a>
+<a href="../index.html">Return Home</a>
+<a href="">Tomorrow</a>
+</footer>
+  </body>
+</html>

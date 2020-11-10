@@ -17,7 +17,7 @@ h3 {
   color: hsl(250, 100%, 67%);
 }
 
-p {
+p, li {
   font: 400 1.0rem/1.5 "Roboto";
   color: hsl(000, 000%, 33%);
 }
