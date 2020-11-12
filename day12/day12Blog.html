@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Day 12</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- <link rel="stylesheet" href="css/debug.css"> -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/text.css">
+    
+  </head>
+  <body>
+
+
+    <article>
+      <h1>DAY 12: Key Sequence Detection</h1>
+      <h2><a href="day12.html">View the finished product here</a></h2>
+
+<p>Key sequence detection is the name of the game today. There's a certain set of keys you need to input to get a secret, but I'm not going to say what that sequence is or how long it is.</p>
+
+<p>Originally, I tried using something called Cornify because the video for today mentioned it, but it did some WEIRD stuff (not to mention their website doesn't work). I ended up settling on using <a href="https://sweetalert2.github.io/" target="blank">SweetAlert2</a>, which I typically use for alerts on my other work.</p>
+
+<p>Nothing in this was SUPER new to me. One of the first web apps I ever made was a <a href="https://jamescalingo.dev/PsychicGame/" target="blank">"Guess the Letter" game</a> which used key detection to try and match guesses to a randomly selected letter, so in essence this is something I've done before, but with a twist.</p>
+
+<p>Arrays are used in this one, and it actually led to a bit more complexity. For those who don't know (and this is important for you budding developers), arrays CANNOT be directly compared; you have to somehow manipulate them if you want to compare them. In my case, I used <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify" target="blank">JSON.stringify( )</a> to make the comparison; basically, it turns your array into a string and then those can be compared.</p>
+
+<p>Mobile users, sadly, get the short end of the stick on this one again. I thought about adding a text field for them like in the app I linked above, but then I realized that there's something I did which is unavailable on mobile (hint hint...).</p>
+
+<p>I honestly went a bit overboard with this one...which you can see if you know how to find my secrets. Speaking of which, there may be a clue to the sequence hiding in plain sight...though there's probably a large subset of those reading this who will find the clue but can't figure out the CODE.</p>
+
+</article>
+<footer>
+<a href="../day11/day11Blog.html">Yesterday</a>
+<a href="../index.html">Return Home</a>
+<a href="">Tomorrow</a>
+</footer>
+<script src="js/day12.ts">
+</script>
+  </body>
+</html>

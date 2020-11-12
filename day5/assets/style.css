@@ -1,7 +1,7 @@
 body {
   margin: 0;
   text-align: center;
-  font-family: Helvetica, sans-serif;
+  font-family: "Mukta", sans-serif;
   background: black;
 }
 
@@ -27,7 +27,7 @@ a {
     font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
     flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
     background 0.2s;
-  font-size: 20px;
+  font-size: 40pt;
   background-size: cover;
   background-position: center;
   flex: 1;
@@ -63,7 +63,7 @@ a {
 
 .panel>*:first-child {
   transform: translateY(-100%);
-  font-size: 30pt
+  font-size: 40pt
 }
 
 .panel.open-active>*:first-child {
@@ -72,6 +72,7 @@ a {
 
 .panel>*:last-child {
   transform: translateY(100%);
+  font-size: 40pt
 }
 
 .panel.open-active>*:last-child {
@@ -80,7 +81,7 @@ a {
 
 .panel.open {
   flex: 5;
-  font-size: 40px
+  font-size: 50pt
 }
 
 .cta {

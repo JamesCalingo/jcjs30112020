@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Day 11</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i">
-    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="css/debug.css"> -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/text.css">
@@ -29,21 +29,21 @@
 
       <p>You may be wondering what's so special about this video player. For that, I'd like you to compare the video player in the app to a simple video HTML tag (which is something I had no idea existed before today). If the video doesn't seem to work, right click on it and select "Show Controls" and it SHOULD work.</p>
 
-      <video src="assets/video.mp4"></video>
+      <video src="assets/video.mp4" autoplay></video>
 
       <p>You'll note how the control areas (play/pause, volume control, progress bar, etc) are VERY different (and also the lack of a playback speed adjuster on this page's video). That's basically what today's app is.</p>
 
       <p>This one was a DOOZY to do. There's a LOT going on, and the JS for this, while fairly straightforward, looks kinda messy at times just due to how everything's done.</p>
 
-      <p>I Also added a little feature to the player: A little thing that shows you the value you change the sliders to. I did this because I wanted to know what I changed values to so that I could adjust based on that (mainly the playback speed). The good news is that it changes consistently based on what you adjust the video to; the less good news is that it's persistent - once the change is made, the value stays there until it's changed again (which doesn't look clean IMO). I could add a timeOut function to remove the value, but I'm not sure if it's worth it right now.</p>
+      <p>I also added a little feature to the player: A little thing that shows you the value you change the sliders to. I did this because I wanted to know what I changed values to so that I could adjust based on that (mainly the playback speed). The good news is that it changes consistently based on what you adjust the video to; the less good news is that it's persistent - once the change is made, the value stays there until it's changed again (which doesn't look clean IMO). I could add a timeOut function to remove the value, but I'm not sure if it's worth it right now.</p>
     
       <p>As someone who (used to) do a lot of video stuff, I may come back to this if I ever wanted to do my own video hosting or something.</p>
 
 </article>
 <footer>
-<a href="">Yesterday</a>
+<a href="../day10/day10Blog.html">Yesterday</a>
 <a href="../index.html">Return Home</a>
-<a href="">Tomorrow</a>
+<a href="../day12/day12Blog.html">Tomorrow</a>
 </footer>
   </body>
 </html>
