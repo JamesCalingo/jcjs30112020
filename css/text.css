@@ -37,3 +37,13 @@ a {
     font-size: 16px;
   }
 }
+
+code {
+  font-family: 'Roboto Mono', monospace;
+  background: lightgray;
+  margin-bottom: 25px;
+}
+
+ul {
+  margin-bottom: 25px;
+}

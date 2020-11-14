@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Copy vs. Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- <link rel="stylesheet" href="css/debug.css"> -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/text.css">
+    <style>
+      #sidenote {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+
+
+    <article>
+      <h1>DAY 14: Copy vs. Reference</h1>
+      <h2><a href="day14Blog.html">View the progress report</a></h2>
+
+<p>Yep, it's another one of those "blog apps". However, since I'm at about the halfway mark of this challenge, today's "regular blog" is me discussing this entire project as a whole. You can use the link above (or the link below) to check it out.</p>
+
+<p>That aside, today, we're going to discuss data. Specifically, we're going to detail copying vs referencing things. I've seen this in a lot of the books I've been reading recently, but for those of you who aren't as aware of these things, let me discuss them for a bit. Trust me, it'll be beneficial.</p>
+
+<p>For example, say you had a variable which contained a string, number, or boolean like <code>let myVar = "boomshakalaka"</code>. Then, you created a second variable and set its value to <code>myVar</code>, like so: <code>let my2ndVar = myVar</code>. if you were to make ANY change to <code>myVar</code>, <code>my2ndVar</code> would be <i>unchanged</i>. This is because <code>my2ndVar</code> is a <i><b>copy</b></i> of <code>myVar</code> from the exact moment it's created, so it ignores any changes made to <code>myVar</code>. You can change <code>myVar</code> to just about anything - including an array, or an object, or even <code>undefined</code> - and <code>my2ndVar</code> will be unchanged (just don't try that last bit in TypeScript though).</p>
+
+<p>Arrays, however, are a different story. If you make an array like <code>let myArray = []</code>, create a second variable and set its value to the original array like <code>let my2ndArray = myArray</code>, and then change a value in <code>myArray</code>, then <code>my2ndArray</code> will also get changed! This is because instead of being a copy, <code>my2ndArray</code> is a <i><b>reference</b></i> to <code>myArray</code> - unlike the primitive variables(i.e. strings, numbers, and booleans), they are both referencing the same thing. In order to make an actual copy, the "classic" method, if you will, is by calling <code>myArray.splice( )</code> and passing in no paramters. Normally, <code>array.splice( )</code> used to create a new array containing a few values from the original; by passsing in nothing, it simply creates a new array with all the values from the original. Another thing you can do is the <code>.concat( )</code> method (something I have almost never seen). There's also the <code>Array.from( )</code> method, which creates a new array from whatever you pass in (the capital A in Array means it's coming from the global object prototype - something I'm not going to go into 'cause it's a bit complicated and I don't quite fully understand it).</p>
+
+<p>With the advent of ES6 (or ECMAScript 6, though I almost never hear that name), there is one more way to copy the array: the spread operator. It looks like this:<br> <code>let my2ndArray = [...myArray]</code></p>
+
+<p>Objects are similar to arrays: if you make two variables reference the same object and then change one of them, both of them will be changed. Copying objects, however, is slightly different: it uses a method called <code>Object.assign( )</code>, which takes in (up to) three parameters: an empty object (to put the new object into), the original object, and any values you want to change. As of the video I saw, there's no way to use spread operators with objects; I'm not sure if this has changed though.</p>
+
+<p>...However, there is one TINY little detail that we need to discuss before wrapping up: nested objects (object inside of an object). They're fairly common, and if you change data in a copy of a nested object, you'd probably be surprised to find out that it changes the data in the original as well!</p>
+
+<p>This is because all of the array and object methods I've discussed only work on the "top level", if you will - once you go inside any nested arrays/objects, changing that data affects anything referencing it. There are ways to get around this, but I'm not going to get into them because you probably shouldn't be doing things like this unless you ABSOLUTELY have to for some unknown reason (one of the methods involves doing some crazy JSON functions). Honestly, though...with constructors being a thing, I have no clue how useful this whole bit is.</p>
+
+<p>And that's really it for today. </p>
+
+  <p>Also, believe it or not, there's nothing in the console today. I did make a .js file to check out some of these things myself, but ended up just running it in my terminal with node.</p>
+
+ 
+
+</article>
+<p id="sidenote"><a href="day14Blog.html">Progress Report</a></p>
+<footer>
+
+  <a href="../day13/day13.html">Yesterday</a>
+  
+  <a href="../index.html">Return Home</a>
+  <a href="">Tomorrow</a>
+  </footer>
+  </body>
+</html>
