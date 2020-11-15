@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Day 15</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- <link rel="stylesheet" href="css/debug.css"> -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/text.css">
+    
+  </head>
+  <body>
+
+
+    <article>
+      <h1>DAY 15: Locally Stored Listings</h1>
+      <h2><a href="day15.html">View the finished product here</a></h2>
+      <p>After a couple of days where the apps have looked...different, to say the least, we reach the halfway point by going back to a "traditional style app".</p>
+
+      <p>This one's a thing that's kinda hard for me to describe. The easiest way for me to descirbe this is that it's a checklist maker...with a twist:</p>
+
+      <p><b>It's in your computer, storing your data.</b></p>
+
+      <p>Basically, I'm using your browser's local storage to store the list you make in the browser's memory. If that makes you uncomfortable, then I'm sorry, but there are two things I should mention:</p>
+
+      <ol>
+        <li>The data is only available on the browser/device you're using (say you're using Chrome on your phone for this; the list won't be available on Chrome on your computer or another browser on your phone)</li>
+        <li>I added a "Clear items" button which will delete the list from local storage.</li>
+      </ol>
+      
+
+      <p>Also, remember how I mentioned the <code>JSON.stringify( )</code> method a few days ago? That's needed here as well! It's because Local Storage can only hold strings, so if you try to give it an array it'll just give you "[object Object]" unless you manipulate it somehow.</p>
+
+      <p>Of the things I've done with this project so far, this one is BY FAR the most useful in real life: use it to make your shopping lists or something, and you don't have to worry about refreshing your page! Super useful in most situations, but with (the situation of 2020), you can greatly shorten your shopping trips so that you're out less!</p>
+
+      <p>As an aside, when checking out my local storage to test things, I found a bunch of references to Tim Hortons...I have NO CLUE why those are there, but when I did bootcamp, there was a Tim Hortons along the way that I did stop at a few times...though I could've sworn I found that place after we did local/session storage.</p>
+</article>
+<footer>
+<a href="../day14/day14.html">Yesterday</a>
+<a href="../index.html">Return Home</a>
+<a href="">Tomorrow</a>
+</footer>
+  </body>
+</html>
