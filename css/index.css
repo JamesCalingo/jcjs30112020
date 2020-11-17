@@ -2,6 +2,7 @@ body{
   display: grid;
   grid-template-columns: 1fr 0.5in [start] 1.25in 5in 1.25in [end] 0.5in 1fr;
   padding: 0.5in 0;
+
 }
 
 body * {
@@ -13,18 +14,19 @@ body * {
 }
 
 h1 {
-  font: 700 2.0rem/1.2 "Lato", sans-serif;
+  font: 700 2.0rem/1.2 "Mukta", sans-serif;
   color: hsl(000, 000%, 33%);
 }
 
 h2 {
-  font: 400 1.5rem/1.2 "Lato", sans-serif;
+  font: 400 1.5rem/1.2 "Mukta", sans-serif;
 }
 
 li {
-  font: 700 1.4rem/1.2 "Lato", sans-serif;
+  font: 700 1.4rem/1.2 "Mukta", sans-serif;
   color: blue;
-  margin-bottom: 10px
+  margin-bottom: 10px;
+  font-size: 18pt;
 }
 
 ul {
@@ -45,5 +47,8 @@ ul {
   }
 }
 footer {
+  font-family: "Mukta", sans-serif;
   text-align: center;
+  font-size: 16pt;
+  color: blue
 }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Day 17</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- <link rel="stylesheet" href="css/debug.css"> -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/text.css">
+    
+  </head>
+  <body>
+
+
+    <article>
+      <h1>DAY 17: Sorting without Articles</h1>
+      <h2><a href="day17.html">View the finished product here</a></h2>
+
+      <p>I wouldn't generally call today's project an "app", but it's a pretty important lesson: sorting items while ignoring any articles (i.e. making sure "the apples" comes before "banana" when doing an alphabetical sort).</p>
+
+      <p>The process for doing this one was very weird: when I went to start my computer this morning, I found it had restarted overnight. I went to the tab that I keep the JS30 in, and the solution was already in the video player, so instead of watching the video, I tried implementing the solution - and it worked!</p>
+
+      <p>Before you say "But James! How can you learn by just seeing the entire solution rather than working through it?", the actual solution is literally a two step process which I understood fairly well:</p>
+
+      <ol>
+        <li>Use Regular Expressions (regexp)* to take out the articles (a, an, and the)</li>
+        <li>Sort the items with the articles taken out</li>
+      </ol>
+
+      <p>That is literally it. Anything past that is up to you.</p>
+
+      <p>Case in point: The video has this thing where it does the sort function in a variable. You wouldn't do that if you were trying to implement this at your job 'cause it's not a great idea (it's not considered <i>clean</i> because you end up repeating yourself a bunch, which is bad), so what I did was make the sort its own function then made a variable which runs <i>that function</i> on an array.</p>
+
+      <p>In what's becoming a recurring thing with this project, the hardest part of it was finding the content to use for it. Originally, I wanted to use the track listing of <i>Gordon</i>, the first album by Barenaked Ladies. However, only two songs on that album start with articles, and trying to expand through their discography yielded few other results.</p>
+
+      <p>I ended up going with the American Film Institute's 100 Years...100 Movies list, but then found out that there are two versions of the list. However, since the Wikipedia article had every movie that was ever on the list in a table, I just used that. I ended up having to "solve" over 300 JS errors while trying to organize the data into strings and an array. By the time I got to Toy Story (one of the few movies on the list that I've seen outside of a film class in High School), I still had 60 errors!</p>
+
+<p>By the way, in case you were wondering why repetition is bad, imagine someone else reading your non-working code and seeing the same thing five or six times while trying to find an error - yes, we now have "workarounds", if you will, but what could be easily solved in ten seconds could now take a minute or more.</p>
+
+<p>(*To learn more about regexp, check out <a href="https://www.w3schools.com/js/js_regexp.asp" target="blank">w3Schools</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" target="blank">Mozilla</a>.)</p>
+
+</article>
+<footer>
+<a href="../day16/day16Blog.html">Yesterday</a>
+<a href="../index.html">Return Home</a>
+<a href="">Tomorrow</a>
+</footer>
+  </body>
+</html>
