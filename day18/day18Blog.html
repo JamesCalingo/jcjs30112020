@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 18</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <!-- <link rel="stylesheet" href="css/debug.css"> -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/text.css">
+
+</head>
+
+<body>
+
+
+  <article>
+    <h1>DAY 18: Time Calculator</h1>
+    <h2><a href="day18.html">View the finished product here</a></h2>
+
+    <p>I think I mentioned this before in a previous blog entry, but I (used to) record A LOT of video. One day, when
+      trying to assess just how much video I've recorded, I found a site that adds timecodes together.</p>
+
+    <p>This is basically another version of that app: it adds timecodes together and tells you how much total time there
+      is.</p>
+
+    <p>...Is what I thought this would be when seeing it in the course list. When I went to watch the video, I realized
+      that this is something COMPLETELY different: it's using data-attributes for times and then uses array methods to
+      calculate the total time.</p>
+
+    <p>I went back and forth about making the video calculator: on one hand, it's not actually what today's lesson is
+      about...but it is relevant, so I decided to try it. You can probably tell by looking at the application how that
+      went.</p>
+
+    <p>Honestly, it was really not that challenging to do. I borrowed a few ideas from Day 15, threw in a bit of today's
+      code, added a few things here and there, and voila! A fully functional app!</p>
+
+    <p>There were a few interesting challenges in getting this to where I wanted it to be:</p>
+
+
+    <p>First, I should mention that the <code>number</code> type for inputs is <i>wonderful</i>. Only a handful of non
+      number inputs are allowed in (+, -, ., and, for some reason, e), but it will only work if the number is an integer
+      (whole number), so decimals and e (which is a constant value of 2.somethingIforget) don't work (I did not try
+      entering pi though, mainly because I don't know how to do it easily). There are a few things to keep in mind
+      though:</p>
+      <ul>
+        <li>Negatives. I had to make a thing to catch if the user accidentally tried to use negative values, 'cause
+          those will cause the app to FREAK OUT.</li>
+        <li>Leading zeros. I wanted to have a thing where the app would add zeroes to minute and second values, but this
+          led to a bevy of quirks: if the user already put in the leading zero, then you'd have a three digit value; if
+          the user put in too many leading zeroes, then those would all end up rendering. I came up with a complex
+          looking solution that basically chains a few ternary operators together; it's not actually that complicated,
+          but if you're new to JS, then it might look funny.</li>
+      </ul>
+    
+
+    <p>Also, remember how I said that repetition is generally not a great idea in code? I had to do it here in order to have
+      the minutes and seconds display "properly" (that is, with leading 0s if they're less than 10). I should note, however, that the method I mentioned above is SLIGHTLY different for the total time calculation in that it doesn't require a second ternary operator (or at least it's not SUPPOSED to unless someone decides to break into the code somehow). It might be okay
+      here since they're actually pointing to VERY DIFFERENT values using slightly different processes (plus the fact that most users won't try and hack into the total time value), but I also renamed them between functions for no
+      real reason, so...</p>
+
+    <p>One of the main things I can see myself adding to this is a "remove" feature to take out any errant data. Other
+      than that, I think this is pretty signifcant for me because it's starting to show that turn from acquiring
+      knowledge to applying it, which is what I think is the most important thing to gain from this project.</p>
+
+    <p>Also, this is probably one of the few times where JavaScript's type coercion may have been actually
+      beneficial...if I hadn't used <code>parseFloat( )</code>.</p>
+
+  </article>
+  <footer>
+    <a href="../day17/day17Blog.html">Yesterday</a>
+    <a href="../index.html">Return Home</a>
+    <a href="">Tomorrow</a>
+  </footer>
+</body>
+
+</html>

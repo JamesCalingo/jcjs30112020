@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<h1>Time Calculator</h1>
+
+<p>Have you ever wondered how long a group of videos is? This is for you!</p>
+<p>Simply input the hours, minutes, and seconds of each video in below, and we'll add them up for you - in real time (pun not intended).</p>
+
+  <form id="time-form">
+  <label for="hours">Hours</label>
+<input type="number" name="hours">
+
+<label for="minutes">Minutes</label>
+<input type="number" name="minutes" maxlength="2">
+
+<label for="seconds">Seconds</label>
+<input type="number" name="seconds" maxlength="2">
+
+<input type="submit" name="submit">
+</form>
+
+
+<ul id="time-list"></ul>
+
+<div id="total"></div>
+
+<a href="day18Blog.html">Read more about this</a>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="day18.js"></script>
+
+</body>
+</html>
