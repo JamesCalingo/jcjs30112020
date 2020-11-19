@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Day 20</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- <link rel="stylesheet" href="css/debug.css"> -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/text.css">
+    
+  </head>
+  <body>
+
+
+    <article>
+      <h1>DAY 20: Speech Recognition</h1>
+      <h2><a href="day20.html">View the finished product here</a></h2>
+
+<p>We're approaching the home stretch.</p>
+
+<p>Today's app is basically just speech recognition. Once you allow the app access to your microphone, it will interpret whatever you say and then show it on the page.</p>
+
+<p>Once again, this app is supposed to be served by a server, but I was able to have it running without the server. However, I learned something VERY important and kinda weird about the <code>SpeechRecognition( )</code> object in this process:</p>
+
+<p>according to <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/SpeechRecognition">MDN</a>, this only works on Google Chrome and Microsoft Edge. I tried it on Firefox and it gave me a TypeError</p>
+
+</article>
+<footer>
+<a href="../day19/day19Blog.html">Yesterday</a>
+<a href="../index.html">Return Home</a>
+<a href="">Tomorrow</a>
+</footer>
+  </body>
+</html>
