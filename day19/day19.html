@@ -7,9 +7,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h1>Take photos!</h1>
   <div class="photobooth">
     <div class="controls">
-      <button onclick="takePhoto()">Take photo</button>
+      
       <div class="rgb">
         <label for="rmin">Red min:</label>
         <input type="range" min=0 max=255 name="rmin">
@@ -28,14 +29,15 @@
         <label for="bmax">Blue max:</label>
         <input type="range" min=0 max=255 name="bmax">
       </div>
+      <button onclick="takePhoto()">Take photo</button>
     </div>
     <canvas class="photo"></canvas>
     <video src="" class="player"></video>
     <div class="photostrip"></div>
   </div>
 
-  <audio src=""></audio>
-
+  <audio src="snap.mp3"></audio>
+<a href="day19Blog.html">Read more about this</a>
   <script src="day19.js"></script>
 </body>
 </html>
