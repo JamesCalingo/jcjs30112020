@@ -23,9 +23,17 @@
 
 <p>Today's app is basically just speech recognition. Once you allow the app access to your microphone, it will interpret whatever you say and then show it on the page.</p>
 
-<p>Once again, this app is supposed to be served by a server, but I was able to have it running without the server. However, I learned something VERY important and kinda weird about the <code>SpeechRecognition( )</code> object in this process:</p>
+<p>Once again, this app is supposed to be served by a server, but I was able to have it running without the server. Overall, it's a very simple app that wasn't that difficult to do; however, I learned something VERY important and kinda weird about the <code>SpeechRecognition( )</code> object in this process:</p>
 
-<p>according to <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/SpeechRecognition">MDN</a>, this only works on Google Chrome and Microsoft Edge. I tried it on Firefox and it gave me a TypeError</p>
+<p>according to <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/SpeechRecognition" target="blank">MDN</a>, this only works on Google Chrome (and Microsoft Edge, but for some reason the app wasn't functioning properly). I tried it on Firefox and, sure enough, it gave me a TypeError. I'm uncertain of the workarounds to get it to work on Firefox (and beyond), but it may be worth looking into should you ever need speech-to-text (i.e. closed captioning).</p>
+
+<p>Also, the browsers kept asking me for mic permissions nonstop with the local files - I had to, like yesterday, upload this a day early and see what would happen. Thankfully, that seemed to calm down the mic requests. It also meant that you could've seen this a day early because I actually had all the links for today active! (I had the file uploaded yesterday, but none of the links were active)</p>
+
+<p>Interestingly, the speech-to-text feature will only work if it can parse what you're trying to say; making random grunting noises will do nothing. Also, be aware that this thing can and will try to interpret audio from things you're watching or listening to if it recognizes them.</p>
+
+<p>As a final note, I had <a href="https://www.youtube.com/watch?v=Lgs9QUtWc3M" target="blank">This old song</a> stuck in my head while doing this; I wanted to make it the page title but I felt that it was too mean out of context...</p>
+
+<p>(I also hid a little secret somewhere in the app. See if you can find it.)</p>
 
 </article>
 <footer>

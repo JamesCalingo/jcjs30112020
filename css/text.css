@@ -47,3 +47,8 @@ code {
 ul, ol {
   margin-bottom: 25px;
 }
+
+footer {
+  font-family: "Mukta", sans-serif;
+  margin-bottom: 50px
+}

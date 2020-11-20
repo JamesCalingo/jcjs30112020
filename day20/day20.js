@@ -1,3 +1,5 @@
+console.log("What are you doing here in the console? Seems kinda *SUS* if you ask me...")
+
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
 
 const recognition = new SpeechRecognition()
