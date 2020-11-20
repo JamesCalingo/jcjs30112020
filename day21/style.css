@@ -40,6 +40,12 @@ h1 {
   font-size: 15px;
 }
 
+h2 {
+  font-size: 30px;
+  color: white
+}
+
 a{
-  font-size: 20px
+  font-size: 20px;
+  color: white
 }
