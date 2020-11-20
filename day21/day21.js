@@ -1,7 +1,6 @@
 const arrow = document.querySelector('.arrow')
 const speed = document.querySelector('.speed-value')
-
-alert("Just a fair warning: This compass and speedometer may not work on your device. To see why, use the read more link.")
+const latlon = document.querySelector('.latlon')
 
 navigator.geolocation.watchPosition(function(data) {
   console.log(`DATA AT ${data.timestamp}
@@ -9,7 +8,9 @@ navigator.geolocation.watchPosition(function(data) {
   direction: ${data.coords.heading},
   lat: ${data.coords.latitude},
   lon: ${data.coords.longitude}`,)
-  speed.textContent = data.coords.speed
+  speed.textContent = Math.round(data.coords.speed)
+  latlon.innerHTML = `Latitude: ${data.coords.latitude}<br>
+  Longitude: ${data.coords.longitude}`
   arrow.getElementsByClassName.transform = `rotate(${data.coords.heading}deg)`
 }, (err) => {
   console.error(err)
