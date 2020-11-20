@@ -9,7 +9,7 @@ navigator.geolocation.watchPosition(function(data) {
   direction: ${data.coords.heading},
   lat: ${data.coords.latitude},
   lon: ${data.coords.longitude}`,)
-  speed.textContent = Math.round(data.coords.speed)
+  speed.textContent = data.coords.speed
   arrow.getElementsByClassName.transform = `rotate(${data.coords.heading}deg)`
 }, (err) => {
   console.error(err)
