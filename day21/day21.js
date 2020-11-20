@@ -1,7 +1,7 @@
 const arrow = document.querySelector('.arrow')
 const speed = document.querySelector('.speed-value')
 
-navigator.geolocation.watchPosition((data) => {
+navigator.geolocation.watchPosition(function(data) {
   console.log(`SPEED: ${data.coords.speed},
   DIRECTION: ${data.coords.heading},
   LATITUDE: ${data.coords.latitude},
