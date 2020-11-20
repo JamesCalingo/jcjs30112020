@@ -23,11 +23,15 @@
 
 <p>Today's project, however, is actually the reverse of that - it's meant for mobile first. It's a compass and speedometer, so unless you're using your computer in some form of mobile transportation device, it's not really going to work.</p>
 
-<p>This is the final project that was supposed to require a server, but I was able to get it to work without one. I believe that this is due to security stuff (like https). Also, for Mac users, this tutorial actually used XCode to simulate motion. However, since my computer has limited space and I have had little reason to use xCode in the past, I didn't use it.</p>
+<p>This is the final project that was supposed to require a server, but I was able to get it to work without one. I believe that this is due to security stuff (like https). Also, for Mac users, this tutorial actually used Xcode to simulate motion. However, since my computer has limited space and I have had little reason to use xCode in the past, I didn't use it.</p>
 
-<p>Maybe I should have, because getting this thing to work took A WHOLE LOTTA WORK.</p>
+<p>Until I dove deeper into this app.</p>
 
-<p>The biggest issue was the Geolocation object: for whatever reason, it kept returning <code>null</code> for the data that I needed: speed and heading (direction). Many Google searches and </p>
+<p>The biggest issue was the Geolocation object: for whatever reason, it kept returning <code>null</code> for the data that I needed: speed and heading (direction) After a few Google searches, I learned that the app working hinges on the <code>speed</code> value: if the device has no way to provide a speed, then it (and heading) will remain <code>null</code>. I TRIED to figure out if an iPhone had a native speed detector, but just found a bunch of apps that measure your speed and not any answers about the hardware itself. I don't know how those apps work, but if they're using pointB-pointA/time, then that's not going to help.</p>
+
+<p>Eventually, I decided to download Xcode and see what would happen if I tried using its iOS simulator.</p>
+
+<p>I also found out that the videos for this course are on YouTube! I went to today's app to see if there were relevant comments and there were! One of them mentioned trying Microsoft Edge, so I did - and sure enough, </p>
 
 </article>
 <footer>
