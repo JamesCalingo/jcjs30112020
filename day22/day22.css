@@ -1,0 +1,36 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0; /* Important! */
+}
+
+
+
+a {
+  text-decoration: none;
+  color: hsl(000, 000%, 33%);
+ 
+  border-radius: 20px;
+}
+
+.highlight {
+  transition: all 0.2s;
+  border-bottom: 2px solid white;
+  position: absolute;
+  top: 0;
+  background: rgb(0, 255, 0);
+  left: 0;
+  z-index: -1;
+  border-radius: 0px;
+  display: block;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+

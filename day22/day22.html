@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 22</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <!-- <link rel="stylesheet" href="css/debug.css"> -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/text.css">
+  <link rel="stylesheet" href="day22.css">
+
+</head>
+
+<body>
+
+
+  <article>
+    <h1>DAY 22: Link Highlights</h1>
+    <h2><a>View the finished product here</a> (as in RIGHT HERE)</h2>
+
+    <p>After three days of apps requiring a secure connection, we're done with apps that require those (I believe for the rest of this project). This means that testing these apps should be MUCH easier from here on out - but there's a small story with that I'll get to in a bit.</p>
+
+    <p>Today, like day 13, I decided to integrate the project into the blog post rather than do two separate things (read: the link for the blog from the main page of this project links here). However, unlike day 13, this one looks a lot more like the regular blog posts...with one small change: you may have noticed that the links for the "app" and the navigator links at the bottom are not their usual colors today. There's a reason for that: move your mouse over those links (and other things I put in the text of this post) and <a>see what happens</a>.</p>
+
+    <p><a>Interesting, isn't it?</a></p>
+
+    <p>Consider this a preview of <a>something to come</a>. There's an upcoming project that will apparently involve multiple dropdown menus, and this is basically the first part of it: having a moving <a>highlight</a>. This <a>highlight</a> is triggered by moving your mouse over anything with an <code><a>a</a></code> tag. (Coincidentally, you may notice I put a <a>highlight</a> on that <code>a</code> in the last sentence, but it got covered by the code CSS)</p>
+
+    <p>The <a>highlight</a> is designed to fit exactly on top of whatever text your mouse is <a>over</a>, and if you scroll down the page, whatever is supposed to be <a>highlighted</a> will be; there's a little extra thing you have to do or else the <a>highlights</a>will be out of place when you scroll.</p>
+
+    <p>I was debating how many <code>a</code> tags to put into this to showcase the <a>highlight effect</a>; I figured it should be enough to show off the effect but not too many to become kinda sorta super annoying. I hope I hit a good <a>balance</a> with that.</p>
+
+    <p>I did have a major <a>I R TTLY SMRT</a> moment while making/testing this when I couldn't figure out why it wasn't working, but then realized that I forgot to add <a>units</a> in my <a>JavaScript</a>.</p>
+
+    <p>The only real thing I would say about this is the <a>highlights</a> originally had rounded edges on them. It kinda messed with my brain a bit looking at them, but I took them out in favor of just a <a>"square box"</a>, so to speak.*</p>
+
+  <p>One final thing I want to mention: I took the liberty of removing the <code>href</code> attributes from all of the <code>a</code> tags except for the ones in the footer. This is for mobile users because the way this works on mobile is by <a>clicking/touching</a> the words to be highlighted. However, if you leave the <code>href</code> blank, it will reload the page on click; by removing the <code>href</code> attribute, the only thing that will happen is the text becoming <a>highlighted</a>.</p>
+
+    <p>For those curious, the <a>highlight</a> color is <a>FULL ON GREEN</a> - as in 0 red, 0 blue, 255 green. Also, see if you can find all the things I put in <code>a</code> tags - especially since you have a clear indicator of when you've found <a>one</a>.</p>
+
+    <p>*I had to edit this paragraph a bit because <a>highlighted</a> text was on split lines on my monitor, which caused the whole thing to become <a>highlighted</a>. Of course, other paragraphs may behave differently depending on how the text ends up getting <a>formatted</a>...</p>
+  </article>
+  <footer>
+    <a href="../day21/day21Blog.html">Yesterday</a>
+    <a href="../index.html">Return Home</a>
+    <a href="">Tomorrow</a>
+    </footer>
+  <script src="day22.js"></script>
+</body>
+
+</html>
