@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Day 23</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- <link rel="stylesheet" href="css/debug.css"> -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/text.css">
+    <style>
+      #hide {
+        font-size: 15px;
+        color: white
+      }
+    </style>
+    
+  </head>
+  <body>
+
+    <article>
+      <h1>DAY 23: Text to Speech</h1>
+      <h2><a href="day23.html">View the finished product here</a></h2>
+      <p>If day 20 was speech to text, then this is the complete opposite of that: text to speech.</p>
+
+      <p>I wouldn’t quite call this a screen reader (something people with limited vision use to understand their computer screens better), but what it’ll do is take what you give it (i.e. the  text box) and it’ll read it for you. You can change the voice, speed, and pitch of the reading using the options above the text box.</p>
+      
+      <p>The odds of you having run into speech synthesis in the wild are actually quite high I’d imagine: if you somehow remember going to airports or train stations, you may have heard announcements that came from a voice that sounded too off to be a real human; chances are it wasn’t. For me, this project reminded me of something I once did as a kid: play with a speech synthesizer. I remember hearing it speak the words we were typing as well as the keys (mainly the “backspace” key) in a monotone voice. It also reminded me of the train station I used to go to a lot in college and how they had this weird voice that sounded like he had a foreign accent listing off train stops and departures.</p>
+
+      <p>This was a very fun project - moreso in testing/playing with the speech synthesis than anything else.</p>
+
+      <p>There are many, many interesting quirks I found in the speech synthesis. For example, I tried the phrase "I AM DAN" with various voices, and for whatever reason, several of them broke up "AM" to "A-M", others broke "DAN" into "D-A-N" (including Alex, the default voice), and some even broke both of them up!</p>
+
+      <p>Another interesting quirk I found was that each voice handles four digit numbers differently; pretty much all of the English voices treat 1900-1999 as years, but outside of that is where things get interesting. I didn't run a full gamut of tests, but some of them treat 1100-1899 as years, others as numbers, and a few voices read 2020 as "twenty-twenty" as opposed to "two thousand (and) twenty".</p>
+
+      <p>There are a few other things I want to mention: first, I do not know what the voice list will look like on things that aren't a Mac. Second, you'll notice that there are some Google voices in the voice list. These may take a bit to load, but it shouldn't be too long. Finally, the video for this uses <code>.filter( )</code> to remove any non-English native voices; I decided to leave them in because I think it's more fun that way (try having it read numbers and emojis to see why). I also threw an Easter Egg in there; see if you can figure it out (it's not hard).</p>
+
+      <p>The least fun part of this? CSS. I wanted to try doing my own, but it was difficult trying to get things to look "right" on the page (and moreso for mobile users).</p>
+
+    <p>For some added fun, try running this AND the Day 20 speech-to-text app at the same time and see what happens...</p>
+      
+      <p>(P.S.: As a video game enthusiast who enjoys a good party game, I should probably also mention <b>Mad Verse City</b>, a game which features heavy use of text to speech and the various voices.)</p>
+
+      <p id="hide">If you undestand the many levels of unintentional comedy with the "I AM DAN" thing and Alex, check the console.</p>
+</article>
+<footer>
+<a href="../day22/day22.html">Yesterday</a>
+<a href="../index.html">Return Home</a>
+<a href="">Tomorrow</a>
+</footer>
+<script>
+  console.log("Shoutout to my fellow 'Stephenites'. I would say I'm an 'OG', but I found his channel in 2012 and the joke's from 2009, so...")
+</script>
+  </body>
+</html>

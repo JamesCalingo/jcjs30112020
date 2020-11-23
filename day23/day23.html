@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text to speech fun</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Text to speech fun!</h1>
+
+<p>This is a simple text-to-speech app. Enter the thing you want the computer to say, "who" you want saying it, how fast you want them to say it (Rate), the pitch of the voice (Pitch), and then hit play.</p>
+
+  <div class="app">
+
+    <select name="voice" id="voices">
+      <option value="">Choose a voice</option>
+    </select>
+
+    <label for="rate">Rate:</label>
+    <input name="rate" type="range" min="0" max="3" value="1" step="0.1">
+
+    <label for="pitch">Pitch</label>
+    <input name="pitch" type="range" min="0" max="2" step="0.1">
+
+    <textarea name="text" id="" cols="30" rows="10" placeholder="Enter your message here"></textarea>
+    <button id="stop">Stop</button>
+    <button id="speak">Speak</button>
+  </div>
+
+  <a href="day23Blog.html">Read more about this</a>
+  <script src="day23.js"></script>
+</body>
+
+</html>
