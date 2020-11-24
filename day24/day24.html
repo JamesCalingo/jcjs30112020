@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Day 24</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- <link rel="stylesheet" href="css/debug.css"> -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/text.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div class="jumbotron">
+      <h1>DAY 24: Fixed-top Navbar</h1><br>
+    
+    </div>
+    <nav id="main">
+      <ul>
+        <li class="logo">DAY 24</li>
+        <li><a href="../day23/day23Blog.html">Yesterday</a></li>
+        <li><a href="../index.html">Return Home</a></li>
+        <li><a href="">Tomorrow</a></li>
+      </ul>
+    </nav>
+<div class="site-wrap">
+    <article>
+      <h2>View the finished product right here...by scrolling down a bit.</h2>
+    
+      <p>Like Day 22, this is going to be another one of those posts where I just showcase the JS in the blog post. Of course, you may have already noticed that something is very different today: The links I usually leave at the bottom are now at the top!</p>
+
+      <p>Well, that and that giant thing on top of the page.</p>
+
+      <p>Originally, I was just going to have the nav tabs at the top and then scroll them down, but then looking at the video for today, there was a giant "jumbotron" (to borrow from Bootstrap). I decided to move the header that's usually at the top of this article to a jumbotron-style component.</p>
+
+      <p>...At least, I WANTED to do that. However, issues with Flexbox being unable to display my subtitle properly made me decide to just put the title in the header and then use the subtitle as the "title" on the post.</p>
+
+      <p>Anyway, it's entirely possible that you've already seen the effect happen, but today's project is a fixed top navbar. I've actually used one of these before WAY back in the day: my personal portfolio had one before I switched it to React.</p>
+
+      <p>For those who don't know and who haven't scrolled down yet because you're reading this on something that's gotta be at least 30 inches, the fixed-top nav is a thing where when you scroll down, the navbar (which usually contains important links) scrolls down with you at a fixed position on top of the window. The one I did in the past had a gradual transition effect (IIRC, it's been a while), but if you scroll a little you'll see that this one does something different: as you go down to where the navbar sticks to the top of the page, you'll notice something slide in.</p>
+
+      <p>I WANTED to try and do my own CSS for this, but it ended up being harder than I anticpated. Yes, I know that this is the JAVASCRIPT 30, but being able to CSS things is still important (especially without Bootstrap or SASS) because it shows you know front end design (which is important for both front end and full stack I feel).</p>
+
+     <p>However, getting this to work ended up being surprisingly challenging. When I had done my own CSS, the thing worked - sorta. The navbar was showing up in a fixed position and had the animation - but it was in the middle of the page as opposed to the top.</p>
+
+     <p>When I imported CSS, the first thing I noticed was that my article (this post) didn't fit in the box that was showing up, so I decided to just remove it (the box-shadow). However, there was another issue: the navbar wasn't scrolling with the page.</p>
+
+     <p>The JavaScript for it was working as intended, so what was happening? It took a bit before I realized what happened: Naming! Y'see, I will sometimes change names of things to suit what I think is better, and more often than not this leads to some awkwardness when trying to import stuff.</p>
+
+     <p>Anyway, as you've noticed by now, the navbar should be at the top if you've scrolled down any. What may or may not have happened is the slide in: for some reason, it's wonky if you're on mobile.</p>
+
+     <p>There's less than a week left in this project. I'll write more on it when it's done, but I've definitely gained some insights from doing this.</p>
+
+     <p>(Also, in case you forgot, the links that are usually at the end of this are in the navbar up top.)</p>
+
+
+</article>
+</div>
+<script src="day24.js"></script>
+  </body>
+</html>
