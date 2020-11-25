@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/text.css">
+  <style>
+    html {
+      box-sizing:border-box;
+      text-align: center;
+      font-family: sans-serif
+    }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+div {
+  width: 100%;
+  padding: 100px
+}
+
+.red{
+  background: red
+}
+.blue{
+  background: blue
+}
+.white {
+  background: white
+}
+
+  </style>
+</head>
+<body class="lets jam">
+  
+  <div class="red">
+    <div class="blue">
+      <div class="white">
+      </div>
+    </div>
+  </div>
+  <h1></h1>
+  <h2>Today's another one of them "concept" days. Click on the rectangles above to see the class names I assigned to them. However, see what happens if you click on them while checking the console...</h2>
+  <p>(To check the console, right click, select "Inspect", and then "Console")</p>
+  <a href="day25Blog.html">Read all about this</a>
+ <script>
+   const divs = document.querySelectorAll("div")
+   const divName = document.querySelector("h1")
+ 
+   function logText(event){
+     const value = this.classList.value
+    console.log(value)
+    divName.innerHTML = value
+   }
+
+divs.forEach(div => div.addEventListener("click", logText, {capture: true}))
+ </script>
+
+</body>
+</html>

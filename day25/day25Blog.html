@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Day X</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- <link rel="stylesheet" href="css/debug.css"> -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/text.css">
+    
+  </head>
+  <body>
+
+
+    <article>
+      <h1>DAY 25: Bubbling, Capture, and Once</h1>
+      <h2><a href="day25.html">View the demo here</a></h2>
+
+      <p>Today's another one of those "concept" days. I'm going to explain stuff here in the blog post, and then I have a technical "demo" as the app.</p>
+
+      <p>If you look at the HTML for the app, you'll notice that I threw the CSS and JS in there for the first time since Day 02. Part of that is because if you look at the body, you'll see that it's mainly just three <code>divs</code> nested within each other (plus my other stuff).</p>
+
+      <p>Today, I'm going to discuss <code>addEventListener( )</code>. I've been using it extensively during this project, and it's about time we actually got in depth about it. Specifically, we're going to discuss what goes into the parentheses.</p>
+
+      <p>There are several things that can go into the parentheses, and their order determines several things. The first thing to go in is the event you're looking for: the most common one for this project has been <code>"click"</code> for clicking on something, but there are others I've used such as <code>"mousemove"</code> for moving the mouse cursor over something or various keyboard events. The second thing is what you want to have happen when that event happens (aka a <code>function</code>); if you've been looking at the JS files, then you'd probably see that I've been declaring functions and what they do outside of the Event Listeners - this is for code cleanliness.</p>
+
+      <p>These things have been in use literally since Day 1; however, what I'm about to discuss is what today's app is about.</p>
+
+      <p>Let's go back to the idea of the nested <code>divs</code>. I added classes to them (one, two, and three) to identify which <code>div</code> is which (and also for CSS purposes). If I made a simple function to return the class name when the <code>div</code> is clicked on, you might be surprised to find out that when you click on the innermost one (white), you get the other two as well!</p>
+
+      <p>This is due to something called <b><i>bubbling</i></b>. When you click on that innermost <code>div</code>, the function runs on it, like you'd expect - but then it also checks the parent elements to see what has to be done on them and does those things. In this case, since the funciton is tied to <i>anything</i> in a <code>div</code> element, it runs the function on the clicked <code>div</code> as well as any parent.</p>
+
+      <p>The inverse of bubbling is <b><i>capturing</i></b>. It takes things from the parent element and runs down to the innermost child element; in our case, clicking on the <i>outermost</i> <code>div</code> (red) will cause the class names of the inner <code>divs</code> to be returned as well.</p>
+
+        <p>If you're wondering how to stop these things from happening, there's a way to do it: <code>event.stopPropagation( )</code>. This will stop events from propagating through the bubble or capture by only running on the first thing clicked.</p>
+
+        <p>This leads to the third thing you can pass into <code>addEventListener( )</code>: a few rules for how you want the event to behave. I'm not going to go too deep into this, but there are a few things you can do by adding a JavaScript object in. Note that these both correspond to <code>booleans</code>, so what will happen is dependent on whether or not you set them to <code>true</code> or <code>false</code>:</p>
+
+        <ul>
+          <li><code>capture</code>, which tells the browser to either capture or bubble events (if set to <code>true</code>, it will capture, otherwise it will bubble</li>
+          <li><code>once</code>, which has the function run exactly one time before unbinding the event. This has its uses, especially in commerce and transaction apps (where you don't want someone trying to do the same thing multiple times by accident).</li>
+        </ul>
+
+        <p>I know that's a lot to take in, but it's very important to understand what's happening, why it's happening, and how you can use it to your advantage. If you want to read more, I found <a href="https://javascript.info/bubbling-and-capturing" target="blank">This resource</a> while looking up bubbling.</p>
+
+        <p>Also, I have to look into something, because interestingly, the place where I display the div names on the page doesn't propagate...</p>
+
+        <p>(One side note: I mention the console in the demo, but getting there on mobile is either difficult or impossible...I learned how to do it in Mobile Chrome a few days ago though.)</p>
+</article>
+<footer>
+<a href="../day24/day24.html">Yesterday</a>
+<a href="../index.html">Return Home</a>
+<a href="">Tomorrow</a>
+</footer>
+  </body>
+</html>
