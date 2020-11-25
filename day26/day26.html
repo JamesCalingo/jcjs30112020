@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 26</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <!-- <link rel="stylesheet" href="css/debug.css"> -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/text.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <nav class="top">
+    <div class="dropdownBG">
+      <span class="arrow"></span>
+    </div>
+
+    <ul class="navBar">
+      <li>
+        <a>About</a>
+        <div class="dropdown dropdown1">
+          <div class="bio">
+            <p>This is Day 26 of the JavaScript 30: A system of cleverly designed dropdown menus. Move your mouse over the other links in this navbar and watch the magic happen. Anything in light blue is a link.<br>This dropdown in
+              particular feels like a Bootstrap card with its nested <code>divs</code> and header...</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <a>Navigation Links</a>
+        <ul class="dropdown dropdown2">
+          <li>
+            <span>Day 25</span>
+            <a href="../day25/day25Blog.html">Yesterday</a>
+          </li>
+          <li>
+            <span>Project</span>
+            <a href="../index.html">Return Home</a>
+          </li>
+          <li>
+            <span>Day 27</span>
+            <a href="#">Tomorrow</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a>Things I like</a>
+        <ul class="dropdown dropdown3">
+          <li>Video Games</li>
+          <li>Computers</li>
+          <li>Music</li>
+          <li>Chips</li>
+          <li>Video Games</li>
+        </ul>
+      </li>
+      <li>
+        <a>Other Links</a>
+        <ul class="dropdown dropdown4">
+          <li><a href="https://jamescalingo.dev">Portfolio</a></li>
+          <li><a href="https://jamescalingo.com">Blog</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <article>
+    <h1>DAY 26: Dropdowns</h1>
+    <h2>View the finished product up top</h2>
+
+
+    <p>Once again, I'm just going to integrate the app with the blog post because it's a component. However, this is the
+      last time I'm going to be doing this.</p>
+
+      <p>Remember back on Day 22 when I did the thing that highlighted <code>a</code> elements and said it was a preview of something? That something is actually today's app. You can see what today's app is by hovering over the "About" tab above: It's a thing for animating different dropdown boxes.</p>
+
+    <p>Once again, I moved the links that are normally at the bottom of this page to the top. What's different, however,
+      is their presentation: They're now grouped together in the "Navigation Links" tab. I also randomly threw in links to my portfolio and blog today just to further showcase the effect.</p>
+
+      <p>Surprisingly, one of the biggest challenges was the non-link text in the dropdowns. It took a bit longer than expected because I couldn't just set the text color in the dropdown class to white: I had to go to each individual element inside the dropdown class and set them. Technically, you can do it all in one shot (which I did), but it is a bit inconvenient, especially if you end up having a ton of CSS rules...</p>
+
+      <p>Outside of that, this one was fairly straightforward and there's really not much more I can say about it except that be aware that it might freak out a bit if you move your mouse rapidly over the navbar and that it's based on the website for eCommerce software <a href="https://stripe.com/" target="blank">Stripe</a>. I don't know if I have any projects where this would be useful, but I can definitely see where it could be used (again, Stripe).</p>
+
+      <p>There is one other thing I should mention: I'm not sure how this will work on mobile, since it did some kinda weird stuff when I tested it...</p>
+
+      <p>Also, since this is going up on American Thanksgiving 2020, Happy Thanksgiving y'all! This year more than ever has given us a lot to be thankful about whether we like it or not...</p>
+  </article>
+ 
+  <script src="day26.js"></script>
+</body>
+
+</html>
