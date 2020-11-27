@@ -1,5 +1,7 @@
+//@ts-check
 const triggers = document.querySelectorAll(".navBar > li")
 const background = document.querySelector(".dropdownBG")
+//@ts-ignore
 const nav = document.querySelector(".top")
 
 function handleEnter () {
@@ -19,9 +21,11 @@ const coords = {
   top: ddCoords.top - navCoords.top,
   left: ddCoords.left - navCoords.left 
 }
-
+//@ts-expect-error
 background.style.setProperty('width', `${coords.width}px`)
+//@ts-expect-error
 background.style.setProperty('height', `${coords.height}px`)
+//@ts-expect-error
 background.style.setProperty("transform", `translate(${coords.left}px, ${coords.top}px)`)
 }
 
