@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 29</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <!-- <link rel="stylesheet" href="css/debug.css"> -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/text.css">
+
+</head>
+
+<body>
+
+
+  <article>
+    <h1>DAY 29: Timer</h1>
+    <h2><a href="day29.html">View the finished product here</a></h2>
+
+    <p>It’s the penultimate day of this project. I’m counting down the hours and minutes until I finish the last project
+      and start moving forward towards other things.</p>
+
+    <p>Perhaps you’re counting down something as well. The days until Christmas, the New Year, (joke I’d rather not say
+      out loud), whatever - you’re just trying to whittle down the seconds until something happens.</p>
+
+    <p>Today’s app is for people like you and me: A countdown clock/timer!</p>
+
+    <p>You can set it to any time you need, or just use the buttons provided if you want some set times. You may be wondering why I chose those values or what "Work", "Break", and "Long Break" mean, and I'll get to that in a sec, but I wanna talk about the process first.</p>
+      
+      <p>A fair amount of this wasn't actually new to me. I've done stuff with timers and intervals before, so that part wasn't really new. The only thing that this really added to that was the idea of using JavaScript's <code>Date</code> object, which updates the end time you see when you start a timer.</p>
+      
+      <p>In fact, I had actually jumped ahead of the curve a bit: a lot of the time display stuff in this app I already did when I made the time calculator app back on Day 18. The biggest new thing in here is the 24 hour to 12 hour converter, complete with AM and PM (since the <code>Date</code> object uses 24 hour time); however, I caught (and fixed) an oversight from the video: 12 Midnight (0:00)!</p>
+      
+      <p>What was (slightly) new to me was CSS. I REALLY wanted to do my own CSS for this seeing as it was just a simple app, so I tried to do that. I had to fumble with/figure out flexbox, font sizes, and device widths before I came up with what you see; hopefully it came out okay (I was running into issues with some displays on smaller mobile screens).</p>
+      
+      <p>As for the colors and the button values...they're related to something known as <b><i>pomodoro timers</i></b>. The pomodoro technique is a method to help you manage time while working that a mentor taught me about: 25 minutes of focused work, then a five minute break. After four or so of these "pomodoros", you can take a longer break (15 minutes). Consider trying this if you find that you keep wasting time and never get anything done (I feel like I should try this again...).<br>I also included a button for an hour long lunch break.</p>
+      
+      <p>And before you ask, I don't know why it's called a pomodoro - all I know is that "pomodoro" is Italian for "tomato".</p>
+      
+  </article>
+  <footer>
+    <a href="../day28/day28Blog.html">Yesterday</a>
+    <a href="../index.html">Return Home</a>
+    <a href="">Tomorrow</a>
+  </footer>
+</body>
+
+</html>

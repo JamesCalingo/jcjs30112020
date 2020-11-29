@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Clocking in</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  
+ 
+  <div class="timer">
+    <div class="controls">
+
+      <button data-time="1500" class="timer-button">25 MIN<br>(WORK)</button>
+      <button data-time="300" class="timer-button">5 MIN<br>(BREAK)</button>
+      <button data-time="900" class="timer-button">15 MIN<br>(LONG BREAK)</button>
+      <button data-time="3600" class="timer-button">OUT TO LUNCH<br>(1 HR)</button>
+      <form name="customTime" id="customTime">
+        <input type="number" name="mins" placeholder="Enter Minutes">
+      </form>
+    </div>
+    <div class="display">
+      <span class="time-left"></span>
+      <h2 class="end-time"></h2>
+    </div>
+  </div>
+  <a href="day29Blog.html">Read more about this</a>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+  <script src="day29.js"></script>
 </body>
+
 </html>

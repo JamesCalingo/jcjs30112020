@@ -1,66 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Day 28</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/reset.css">
-    <!-- <link rel="stylesheet" href="css/debug.css"> -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/text.css">
-    <style>
-    .mid-text-h1{
-        margin-bottom: 25px
-    }</style>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 28</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <!-- <link rel="stylesheet" href="css/debug.css"> -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/text.css">
+  <style>
+    .mid-text-h1 {
+      margin-bottom: 25px
+    }
+  </style>
+</head>
+
+<body>
 
 
-    <article>
-      <h1>DAY 28: Video Speed 2: Quickman Edition</h1>
-      <h2><a href="day28.html">View the finished product here</a></h2>
+  <article>
+    <h1>DAY 28: Video Speed 2: Quickman Edition</h1>
+    <h2><a href="day28.html">View the finished product here</a></h2>
 
-        <p>Remember how I did a custom video player interface back on day 11? This is similar to that, but it's for only speed. It looks and behaves differently though: As you move your mouse up and down the bar on the left, the speed of the video changes.</p>
-        
-        <p>Like back then, the hardest part of this was finding an actual video. I have a bunch of those Animal Crossing clips, but none of them are longer than 30 seconds due to how recording clips on Nintendo Switch works (I felt 30 seconds was WAY too short for this). I thought about just editing a bunch of those clips together, but it seemed like more work than was necessary. However, searching through my flies led me to an old video that I thought would be good for the app...and that's where the real "fun" begins.</p>
-        
-        <p>And by fun, I mean <b>ABSOLUTE NIGHTMARE OF A CRAP SHOW.</b></p>
-        
-        <p>Y'see, making and testing the app was fine. Everything worked as I expected, so I figured that it should be okay to push to GitHub. I decided to do so by using VSCode's git tools as opposed to the terminal.</p>
-        
-        <p>However, I realized that I forgot to update the main page with the links for today, so I did that and tried to push the changes via Terminal this time.</p>
-        
-        <p>Terminal took ages to try and push the changes, and then failed because the video I put in was too big. I figured that if the vid was too big, then just replace it with a smaller video and that should make things better!</p>
-        
-        <p>right?</p>
-        
-        <h1 class="mid-text-h1">NOPE!</h1>
-        
-        <p>I tried deleting the video, making a new folder, gitignoring - nothing worked. Every time I tried to push, it was trying to commit the changes from the video - and failing every time. It seemed like there was no way around it - my local repo was essentially condemned.</p>
-        
-        <p>Thank goodness you can make changes on GitHub itself!</p>
-        
-        <p>I'm sure a lot of you aren't super aware of this, but you can change files <i>on GitHub itself</i> - assuming you have the permissions to do so. I've done a few READMEs via this method in the past, but never anything beyond that. I don't recommend it though, as it's a bit cumbersome and fairly limited  - for example, you don't have access to a lot of text editor features such as autocompletion.</p>
-        
-        <p>However, remember a few days ago when I mentioned the Brackets text editor? Turns out there's another one called <a href="https://theia-ide.org/" target="blank">Theia</a> that's more or less browser based, and I had connected it to my GitHub already. I was able to open the repository in Theia, make the files</p>
-        
-        <p>Could I have just tried a YouTube video or something? Well, I tried a YouTube link and that didn't work (no file extension type), so that's a no. I could've just uploaded the video to Dropbox or Google Drive and gone from there as well, but I'd rather not because I think those </p>
+    <p>Remember how I did a custom video player interface back on day 11? This is similar to that, but it's for only
+      speed. It looks and behaves differently though: As you move your mouse up and down the bar on the left, the speed
+      of the video changes.</p>
 
-        <p>Anyway...</p>
-        
-        <p>Back to the app at hand, I swear this is the last day I'm going to heavily borrow from the stock CSS. It's just that this app in particular requires things that involve the stock CSS, and while I know that it's not necessary, I'm not quite sure if I want to deal with adjusting the JS for different CSSing.</p>
-        
-        <p>Also, I'm not going to lie: Not sure I'm a fan of having the speed increase the lower the mouse is. There may be a way to configure it so that as the bar fills toward the top, it gets faster, but I'm not entirely sure on the details for that...</p>
-        
-        <p>If you want to see what I originally had for today (because I threw a funny anecdote in there), <a href="day28BlogOld.html">you can check it out here</a>.</p>
-        
-</article>
-<footer>
-<a href="../day27/day27Blog.html">Yesterday</a>
-<a href="../index.html">Return Home</a>
-<a href="">Tomorrow</a>
-</footer>
-  </body>
+    <p>Like back then, the hardest part of this was finding an actual video. I have a bunch of those Animal Crossing
+      clips, but none of them are longer than 30 seconds due to how recording clips on Nintendo Switch works (I felt 30
+      seconds was WAY too short for this). I thought about just editing a bunch of those clips together, but it seemed
+      like more work than was necessary. However, searching through my flies led me to an old video that I thought would
+      be good for the app...and that's where the real "fun" begins.</p>
+
+    <p>And by fun, I mean <b>ABSOLUTE NIGHTMARE OF A CRAP SHOW.</b></p>
+
+    <p>Y'see, making and testing the app was fine. Everything worked as I expected, so I figured that it should be okay
+      to push to GitHub. I decided to do so by using VSCode's git tools as opposed to the terminal.</p>
+
+    <p>However, I realized that I forgot to update the main page with the links for today, so I did that and tried to
+      push the changes via Terminal this time.</p>
+
+    <p>Terminal took ages to try and push the changes, and then failed because the video I put in was too big. I figured
+      that if the vid was too big, then just replace it with a smaller video and that should make things better!</p>
+
+    <p>Right?</p>
+
+    <h1 class="mid-text-h1">NOPE!</h1>
+
+    <p>I tried deleting the video, making a new folder, gitignoring - nothing worked. Every time I tried to push, it was
+      trying to commit any and all changes involving the video - and failing every time. It seemed like there was no way
+      around it - my local repo was essentially condemned.</p>
+
+    <p>Thank goodness for GitHub!</p>
+
+    <p>I'm sure a lot of you aren't super aware of this, but you can change files <i>on GitHub itself</i> - assuming you
+      have the permissions to do so. I've done a few READMEs via this method in the past, but never anything beyond
+      that. I don't recommend it though, as it's a bit cumbersome and fairly limited - for example, you don't have
+      access to a lot of text editor features such as autocompletion of text and brackets.</p>
+
+    <p>However, remember yesterday when I mentioned the Brackets text editor? Turns out there's another one called <a
+        href="https://theia-ide.org/" target="blank">Theia</a>/<a href="https://www.gitpod.io/"
+        target="blank">Gitpod</a>* that's web/browser based, and I had connected it to my GitHub already in trying to get it set up for myself. I was able to
+      open the repository there, make the files and changes (relatively) quickly, and then delete the repository from my
+      local computer and redownload it to get it working again.</p>
+
+    <p>Could I have just tried using a YouTube video or something for the app? Well, I tried a YouTube link and that
+      didn't work (no file extension type), so that's a no. I could've just uploaded the video to Dropbox or Google
+      Drive and gone from there as well, but I'd rather not because I don't really use Dropbox and my Google Drive is
+      getting quite full.</p>
+
+    <p>Also, yes, I am aware of <code>git revert</code> (mainly due to some wacky stuff involving my portfolio in the
+      past), but I'm not entirely sure how it works...</p>
+
+    <p>Anyway...</p>
+
+    <p>Back to the app at hand, I swear this is the last day I'm going to heavily borrow from the stock CSS. It's just
+      that this app in particular requires things that involve the stock CSS, and while I know that it's not necessary,
+      I'm not quite sure if I want to deal with adjusting the JS for different CSSing.</p>
+
+    <p>Also, I'm not going to lie: Not sure I'm a fan of having the speed increase the lower the mouse is. There may be
+      a way to configure it so that as the bar fills toward the top, it gets faster, but I'm not entirely sure on the
+      details for that...</p>
+
+    <p>If you want to see the blog post for what I originally had for today (because I threw a funny anecdote in there),
+      <a href="day28BlogOld.html">you can check it out here</a>.</p>
+
+    <p>*(I don't entirely know what exactly Theia/Gitpod are or the difference between them, but I do know that Theia is
+      based on VSCode...)</p>
+
+  </article>
+  <footer>
+    <a href="../day27/day27Blog.html">Yesterday</a>
+    <a href="../index.html">Return Home</a>
+    <a href="../day29/day29Blog.html">Tomorrow</a>
+  </footer>
+</body>
+
 </html>
