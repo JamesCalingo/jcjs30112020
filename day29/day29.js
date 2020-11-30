@@ -16,7 +16,6 @@ function timer(seconds) {
       clearInterval(countdown);
         audio.play()
       Swal.fire("TIME");
-      document.title = "Timer done!"
     }
     display(remainingTime);
   }, 1000);
@@ -34,9 +33,7 @@ function displayEndTime(timestamp) {
   const end = new Date(timestamp);
   const hour = end.getHours();
   const mins = end.getMinutes();
-  endDisplay.textContent = `End Time: ${hour > 12 ? hour - 12 : hour === 0 ? 12: hour}:${
-    mins < 10 ? 0 : ""
-  }${mins} ${hour >= 12 ? "PM" : "AM"}`;
+  endDisplay.textContent = `End Time: ${hour > 12 ? hour - 12 : hour === 0 ? 12 : hour}:${mins < 10 ? 0 : ""}${mins} ${hour >= 12 ? "PM" : "AM"}`;
 }
 
 function useButtonTime() {
@@ -53,7 +50,7 @@ document.customTime.addEventListener("submit", function (event) {
       icon: "error",
       title: "You can't have negative time!",
     });
-    return false;
+    return;
   }
   timer(mins * 60);
   this.reset();
